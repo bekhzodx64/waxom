@@ -1,0 +1,432 @@
+@import './normalize.css'
+@import './et-line-font/et-line-font/style.css'
+@mixin montserrat
+   font-family: Montserrat, sans-serif
+@mixin raleway
+   font-family: Raleway, sans-serif
+
+// ========================================Main
+.container
+   max-width: 1250px
+   margin: 0 auto
+   padding: 0 30px
+
+      
+.btn
+   display: inline-block
+   border-radius: 8px
+   background-color: #998675
+   box-shadow: inset 0px -5px 0 0 #736357
+   padding: 20px 15px
+   font-size: 18px
+   text-transform: uppercase
+   color: #DCDCDC
+   font-weight: 800
+   transition: box-shadow .1s linear, color .2s linear
+   &:hover
+      color: #f0ffff
+      cursor: pointer
+   &:active
+      color: #F0FFFF
+      box-shadow: inset 0px -3px 0 0 #736357
+
+.section
+   max-width: 1920px
+   margin: 0 auto
+   padding: 80px 0
+
+// ========================================Top
+.header
+   max-width: 1920px
+   margin: 0 auto
+   position: absolute
+   top: 0
+   left: 0
+   right: 0
+   z-index: 1000
+   padding-top: 30px
+   &__content
+      display: flex
+      justify-content: space-between
+      align-items: center
+   &__logo
+      display: flex
+      align-items: center
+      font-size: 32px
+      color: #ffffff
+      font-family: Raleway
+      &:hover
+         cursor: pointer
+   .nav
+      display: flex
+      &__link
+         color: #ffffff
+         font-size: 14px
+         text-transform: capitalize
+         margin: 0 15px
+         transition: color .2s linear
+         &:hover
+            color: #c7b299
+
+.intro
+   display: flex
+   flex-direction: column
+   max-width: 1920px
+   margin: 0 auto
+   height: 100vh
+   background: url("../img/bg-image.png") center no-repeat
+   background-size: cover
+   justify-content: center
+   &__content
+      text-align: center
+      max-width: 600px
+      color: #fff
+   &__toptitle
+      font-size: 34px
+      font-weight: 500
+   &__title
+      text-transform: capitalize
+      font-size: 52px
+      font-weight: 800
+      letter-spacing: -3px
+      padding-top: 10px
+   &__undertitle
+      font-size: 15px
+      font-weight: 300
+      line-height: 1.5
+      padding-top: 10px
+   &--btn
+      margin-top: 50px
+
+// ========================================Grid
+.grid
+   display: flex
+   justify-content: space-between
+   &__item
+      width: 20%
+      text-align: center
+      i
+         font-style: normal
+         font-size: 50px
+         color: #555
+         transition: color .2s linear
+      &::after
+         content: ""
+         display: block
+         width: 70px
+         height: 3px
+         background-color: #f1eee9
+         margin: 30px auto 0 auto
+         transition: background-color .2s linear
+      &:hover
+         cursor: pointer
+         i
+            color: #c7b299
+         .grid__item--title
+            color: #c7b299
+         &::after
+            background-color: #c7b299
+   &__item--title
+      font-size: 22px
+      font-weight: 600
+      color: #555
+      padding: 30px 0 20px 0
+      transition: color .2s linear
+   &__item--undertitle
+      font-size: 14px
+      font-weight: 300
+      line-height: 24px
+
+// ========================================Realization
+.realization
+   max-width: 1920px
+   margin: 0 auto
+   background-color: #fbfaf8
+   padding-top: 80px
+   &__content 
+      margin: 0 auto
+      text-align: center
+      max-width: 700px
+      &--title
+         font-size: 30px
+         font-weight: 600
+         color: #555
+      &--undertitle
+         font-size: 16px
+         padding: 20px 0 50px 0
+         font-weight: 300
+         line-height: 1.5
+         color: #8c8c8c
+   img
+      width: 100%
+      display: block
+
+// ========================================Multi
+.multi
+   max-width: 1920px
+   margin: 0 auto
+   background-image: linear-gradient(to right, #211b19, #4e3427)
+   padding: 50px 0
+   &__content
+      display: flex
+      justify-content: space-between
+      align-items: center
+      &--title
+         font-size: 28px
+         color: #fff
+         span
+            color: #c7b299
+      &--undertitle
+         font-size: 18px
+         font-weight: 300
+         color: #615855
+   
+// ========================================Projects
+.projects
+   &__top
+      text-align: center
+      margin: 0 auto
+      max-width: 730px
+      &--title
+         font-size: 30px
+         font-weight: 600
+         color: #555
+      &--undertitle
+         font-size: 16px
+         font-weight: 300
+         line-height: 1.7
+         color: #8c8c8c
+         padding-top: 30px
+      &--nav
+         display: flex
+         justify-content: space-around
+         padding-top: 30px
+      &--link
+         padding: 10px 20px
+         border: 1px solid #ebebeb
+         border-radius: 10px
+         text-transform: capitalize
+         color: #8c8c8c
+         transition: color, background-color .2s linear
+         &:hover
+            background-color: #998675
+            color: #fff
+   &__grid
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      &--item
+         overflow: hidden
+         background-color: #fbfaf8
+         border: 1px solid #ebebeb
+         border-radius: 20px 20px 20px 20px
+         margin-top: 50px
+         &:hover
+            cursor: pointer
+            .projects__grid--txt
+               background-color: #362f2d
+               &::before
+                  border-bottom: 25px solid #362f2d
+            .projects__grid--title
+               color: #fff
+            .projects__grid--undertitle
+               color: #c7b299
+            img
+               opacity: .4
+      &--img
+         background-color: #000
+         img
+            transition: opacity .2s linear
+            display: block
+            width: 100%
+      &--txt
+         position: relative
+         padding: 30px 0 30px 30px
+         transition: background-color .2s linear
+         &::before
+            content: ""
+            display: block
+            position: absolute
+            border-top: 27px solid transparent
+            border-right: 30px solid transparent
+            border-left: 30px solid transparent
+            border-bottom: 25px solid #fbfaf8
+            bottom: 85px
+            left: 10px
+            transition: border .2s linear
+      &--title
+         font-size: 20px
+         font-weight: 500
+         color: #c7b299
+         transition: color .2s linear
+      &--undertitle
+         font-size: 14px
+         font-weight: 300
+         color: #d1d1d1
+         transition: color .2s linear
+   &__button
+      text-align: center
+      margin-top: 50px
+
+// ========================================Statistics
+.stat
+   max-width: 1920px
+   margin: 0 auto
+   background-image: linear-gradient(to right, #211b19, #4e3427)
+   padding: 80px 0
+   &__content
+      display: flex
+      text-align: center
+      &--item
+         width: 20%
+         text-transform: uppercase
+         span
+            font-size: 44px
+            color: #c7b299
+      &--num
+         font-size: 48px
+         font-weight: 200
+         color: #fff
+         padding-top: 20px
+      &--txt
+         font-size: 14px
+         font-weight: 300
+         color: #c7b299
+         padding-top: 20px
+         &::after
+            content: ""
+            display: block
+            background-color: #fff
+            width: 30px
+            height: 2px
+            margin: 30px auto 0 auto
+
+// ========================================Recent Posts
+.post
+   &__top
+      text-align: center
+      margin: 0 auto
+      max-width: 730px
+      padding-bottom: 40px
+      &--title
+         font-size: 30px
+         font-weight: 600
+         color: #555555
+      &--undertitle
+         padding-top: 20px
+         font-weight: 300
+         line-height: 1.8
+         color: #8c8c8c
+   &__grid
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      &--item
+         overflow: hidden
+         width: 30%
+         background-color: #fbfaf8
+         border: 1px solid #ebebeb
+         border-radius: 20px 20px 20px 20px
+         transition: background-color .2s linear
+         &:hover
+            cursor: pointer
+            background-color: #362f2d
+            img
+               opacity: .4
+            .post__grid--title
+               color: #c7b299
+            .post__grid--undertitle
+               color: #fff
+      &--img
+         background-color: #000
+         img
+            display: block
+            width: 100%
+            transition: opacity .2s linear
+      &--txt
+         padding: 30px 5px 30px 30px
+      &--title
+         font-size: 20px
+         font-weight: 500
+         color: #555555
+         padding-bottom: 20px
+         transition: color .2s linear
+      &--undertitle
+         font-size: 14px
+         font-weight: 300
+         line-height: 1.5
+         color: #8c8c8c
+         padding-bottom: 20px
+         transition: color .2s linear
+      &--link
+         font-size: 14px
+         font-weight: 300
+         color: #c7b299
+         text-transform: capitalize
+         &:hover
+            text-decoration: underline
+
+// ========================================Partners
+.partners
+   max-width: 1920px
+   margin: 0 auto
+   background: url("../img/partners.png") center no-repeat
+   padding: 100px 0
+   &__content
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+      img
+         display: block
+
+// ========================================Footer
+.footer
+   max-width: 1920px
+   margin: 0 auto
+   padding: 80px 0
+   background-color: #191919
+   &__content
+      display: flex
+      justify-content: space-between
+   &__item
+      width: 20%
+   &__txt
+      padding: 30px 0
+      font-size: 14px
+      font-weight: 300
+      color: #555555
+      line-height: 2
+   &__link
+      font-size: 14px
+      color: #d1d1d1
+      text-transform: capitalize
+      &:hover
+         text-decoration: underline
+   &__post
+      font-size: 24px
+      font-weight: bold
+      color: #ffffff
+      text-transform: capitalize
+      padding-bottom: 30px
+      &--item
+         padding-bottom: 20px
+         border-bottom: 1px solid #252525
+         &:last-child
+            border-bottom: none
+      &--date
+         font-size: 12px
+         font-weight: 300
+         line-height: 1.5
+         color: #363636
+      &--txt
+         font-size: 14px
+         font-weight: 300
+         line-height: 1.5
+         color: #555555
+
+
+
+
+
+
